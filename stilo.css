@@ -15,13 +15,14 @@ body {
     line-height: 1.6;
 }
 header {
-    background-color: var(--quinta-cor);
+    
     padding: 10px 0;
     text-align: center;
-    background-image: url(imagens/pexels-pixabay-373076.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+header .logo img {
+    width: 150px;
+    height: auto;
 }
 header ul {
     
@@ -29,8 +30,27 @@ header ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    inline-size: none;
+    animation: infinite;
+    text-align: right;
 }
+header ul li {
+    display: inline;
+    margin: 0 15px;
+}
+header ul li a {
+    text-decoration: none;
+    color: var(--primeira-cor);
+    font-weight: bold;
+    font-size: 18px;}
+header ul li a:hover {
+    color: var(--segunda-cor);
+}
+#home{
+    background-color: var(--terceira-cor);
+    color: var(--quinta-cor);
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;}
 
 strong{
     color: var(--segunda-cor);
