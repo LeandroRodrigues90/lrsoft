@@ -50,8 +50,21 @@ header ul li a:hover {
     color: var(--quinta-cor);
     padding: 10px;
     text-align: center;
-    font-size: 15px;}
+    font-size: 15px;
+    
+}
+    
+#sobre{
+    padding: 20px;
+    margin: 20px;
+}
+#servicos{
+    background-color: var(--primeira-cor);
+    color: var(--quinta-cor);
+    padding: 20px;
+    
 
+}
 strong{
     color: var(--segunda-cor);
 }
