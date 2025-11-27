@@ -14,11 +14,16 @@ body {
     text-align: justify;
     line-height: 1.6;
 }
+
 header {
-    background-attachment: fixed;
+
     padding: 10px 0;
-    text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    background-color: var(--quinta-cor);
+    width: 100%;
+    top: 0;
+    left: 0;    
 }
 header .logo img {
     width: 150px;
@@ -29,7 +34,6 @@ header ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     animation: infinite;
     text-align: right;
 }
@@ -100,7 +104,7 @@ footer {
 }
 .quadros {
     display: grid;
-    grid-template-columns: 100%;     
+    grid-template-columns: 100%;   
     justify-content: center;
     align-items: center;
 }
