@@ -15,7 +15,7 @@ body {
     line-height: 1.6;
 }
 header {
-    
+    background-attachment: fixed;
     padding: 10px 0;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
