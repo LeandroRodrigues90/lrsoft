@@ -43,7 +43,11 @@ header ul li a {
     font-weight: bold;
     font-size: 18px;}
 header ul li a:hover {
-    color: var(--segunda-cor);
+    background-color: var(--segunda-cor);
+    padding: 10px;
+    box-shadow: #33333333 0px 4px 8px 0px;
+    color: var(--quinta-cor);
+    border-radius: 10px;
 }
 #home{
     background-color: var(--terceira-cor);
