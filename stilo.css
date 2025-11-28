@@ -14,13 +14,16 @@ body {
     text-align: justify;
     line-height: 1.6;
 }
+h1, h2, h3 {
+    color: var(--quinta-cor);
+}
 
 header {
-    
+    background-color: var(--quinta-cor);
     padding: 10px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: fixed;
-    background-color: var(--quinta-cor);
+    
     width: 100%;
     top: 0;
     left: 0;    
@@ -53,31 +56,34 @@ header ul li a:hover {
     color: var(--quinta-cor);
     border-radius: 10px;
 }
-#home{
-    background-color: var(--terceira-cor);
-    color: var(--quinta-cor);
-    padding: 10px;
-    text-align: center;
-    font-size: 15px;
-    
+#home {
+    color: var(--primeira-cor);
+
 }
+
 #minha-imagem{
     margin: 10px 0 -300px 0;
+    text-align: center;
  
 }
 #minha-imagem img{
     
-    max-width: 500px;
+    max-width: 510px;
     height: auto;
     
     
 }
 .sobre{
+    
     padding: 160px 0 0 0;
     margin:  1% 10% 1% 10%;    
 
 }
-
+.sobre h2{
+    color: var(--terceira-cor);
+    margin-bottom: 20px;
+    font-size: 2em;
+}
 #servicos{
     background-color: var(--primeira-cor);
     color: var(--quinta-cor);
