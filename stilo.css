@@ -16,7 +16,7 @@ body {
 }
 
 header {
-
+    
     padding: 10px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: fixed;
@@ -61,11 +61,23 @@ header ul li a:hover {
     font-size: 15px;
     
 }
-    
-#sobre{
-    padding: 20px;
-    margin: 20px;
+#minha-imagem{
+    margin: 10px 0 -300px 0;
+ 
 }
+#minha-imagem img{
+    
+    max-width: 500px;
+    height: auto;
+    
+    
+}
+.sobre{
+    padding: 160px 0 0 0;
+    margin:  1% 10% 1% 10%;    
+
+}
+
 #servicos{
     background-color: var(--primeira-cor);
     color: var(--quinta-cor);
@@ -122,6 +134,14 @@ footer {
     text-align: left;
     font-size: 1.8em;
 }
-#serviços ul li {
-    list-style-image: url(imagens/Tick_Mark_Dark_icon-icons.com_69147.png);
+#servicos ul {
+    list-style: none;
+}
+#servicos ul li::before {
+    content: url(imagens/Tick_Mark_Dark_icon-icons.com_69147.png);
+    width: 10px;
+    height: 10px;
+    margin-right: 8px;
+    
+
 }
