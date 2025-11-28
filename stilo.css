@@ -6,6 +6,7 @@
     --quarta-cor:#F2E205;
     --quinta-cor:#fff;
 }
+
 body {
     font-family: poppins, sans-serif;
     background-color: var(--quinta-cor);
@@ -28,11 +29,16 @@ header {
     top: 0;
     left: 0;    
 }
+
+
 header .logo img {
     width: 150px;
     height: auto;
+
+    
 }
 header ul {
+    
     
     list-style-type: none;
     margin: 0;
@@ -45,6 +51,7 @@ header ul li {
     margin: 0 15px;
 }
 header ul li a {
+    
     text-decoration: none;
     color: var(--primeira-cor);
     font-weight: bold;
@@ -62,7 +69,7 @@ header ul li a:hover {
 }
 
 #minha-imagem{
-    margin: 10px 0 -300px 0;
+    margin: 40px 0 -300px 0;
     text-align: center;
  
 }
