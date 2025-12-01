@@ -110,8 +110,13 @@ strong{
     
 }
 
-.linkedin img, .github img, .whatsapp img , .tiktok img
+.linkedin img, .github img, .whatsapp img
 {
+    width: 40px;
+    height: 40px;
+    filter:invert(100%);
+}
+.tiktok img{
     width: 40px;
     height: 40px;
     filter:invert(100%);
