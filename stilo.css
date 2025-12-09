@@ -1,165 +1,260 @@
 @charset "utf-8";
 :root {
-    --primeira-cor: #1D3D67;
-    --segunda-cor: #85C535;
-    --terceira-cor: #333;
-    --quarta-cor:#F2E205;
-    --quinta-cor:#fff;
+    --primeira-cor: #1D3D67; /* Azul escuro principal */
+    --segunda-cor: #85C535; /* Verde de destaque */
+    --terceira-cor: #333; /* Texto escuro */
+    --quarta-cor:#F2E205; /* Amarelo (não muito usado) */
+    --quinta-cor:#fff; /* Branco */
 }
 
+/* GERAL */
 body {
-    font-family: poppins, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: var(--quinta-cor);
     margin: 0;
     padding: 0;
-    text-align: justify;
     line-height: 1.6;
+    color: var(--terceira-cor); /* Texto principal em cor escura */
+}
+strong {
+    color: var(--segunda-cor);
+    font-weight: 600;
 }
 h1, h2, h3 {
-    color: var(--quinta-cor);
+    color: var(--terceira-cor); /* Títulos em cor escura por padrão */
+}
+main {
+    /* Garante que o conteúdo não fique escondido sob o header fixo */
+    margin-top: 90px; 
+}
+section {
+    padding: 60px 20px; /* Espaçamento vertical padrão para as seções */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
+/* HEADER FIXO */
 header {
     background-color: var(--quinta-cor);
     padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     position: fixed;
-    
     width: 100%;
     top: 0;
-    left: 0;    
+    left: 0; 
+    z-index: 1000; /* Garante que o menu fique acima de outros elementos */
 }
-
-
+#back {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 header .logo img {
     width: 150px;
     height: auto;
-
-    
 }
 header ul {
-    
-    
     list-style-type: none;
     margin: 0;
     padding: 0;
-    animation: infinite;
-    text-align: right;
 }
 header ul li {
     display: inline;
-    margin: 0 15px;
+    margin-left: 20px;
 }
 header ul li a {
-    
     text-decoration: none;
     color: var(--primeira-cor);
-    font-weight: bold;
-    font-size: 18px;}
+    font-weight: 500;
+    font-size: 1em;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+}
 header ul li a:hover {
     background-color: var(--segunda-cor);
-    padding: 10px;
-    box-shadow: #33333333 0px 4px 8px 0px;
+    box-shadow: 0 4px 8px rgba(51, 51, 51, 0.2);
     color: var(--quinta-cor);
-    border-radius: 10px;
+    border-radius: 5px;
 }
+
+/* HOME */
 #home {
-    color: var(--primeira-cor);
-
-}
-
-#minha-imagem{
-    margin: 40px 0 -300px 0;
+    background-color: var(--primeira-cor);
     text-align: center;
- 
+    padding-top: 150px; 
+    padding-bottom: 80px;
+    margin-top: 0;
 }
-#minha-imagem img{
-    
-    max-width: 440px;
-    height: auto;
-    
-    
+.apresentação h1 {
+    font-size: 3em;
+    color: var(--quinta-cor);
+    margin-bottom: 5px;
 }
-.sobre{
-    
-    padding: 160px 0 0 0;
-    margin:  5% 10% 1% 10%;    
+.apresentação p {
+    font-size: 1.5em;
+    color: var(--segunda-cor);
+    margin-top: 0;
+}
 
+/* MAIS SOBRE */
+#mais-sobre {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    gap: 30px;
+    padding-top: 80px;
 }
-.sobre h2{
-    color: var(--terceira-cor);
-    margin-bottom: 20px;
+#minha-imagem {
+    flex: 1 1 400px; 
+    text-align: center;
+    margin: 0;
+}
+#minha-imagem img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.sobre {
+    flex: 1 1 500px;
+    padding: 0;
+    margin: 0;
+    text-align: justify;
+}
+.sobre h2 {
+    color: var(--primeira-cor);
     font-size: 2em;
+    border-bottom: 2px solid var(--segunda-cor);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
-#servicos{
+
+/* SERVIÇOS */
+#servicos {
     background-color: var(--primeira-cor);
     color: var(--quinta-cor);
-    padding: 20px;
-    
-
+    padding: 60px 20px;
 }
-strong{
-    color: var(--segunda-cor);
+#servicos h2 {
+    color: var(--quinta-cor);
+    text-align: center;
+    margin-bottom: 40px;
+}
+#servicos ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 20px auto; 
+}
+#servicos ul li {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    text-align: left;
+}
+/* Ícone de checkmark com Unicode, mais eficiente que imagem */
+#servicos ul li::before {
+    content: "\2713"; 
+    color: var(--segunda-cor); 
+    font-weight: bold;
+    margin-right: 15px;
+    display: inline-block;
+    width: 20px; 
+}
+
+/* SOLUÇÕES (Quadros) */
+#soluções {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.quadros {
+    display: grid;
+    /* Layout responsivo: 1 coluna em telas pequenas, até 3 em telas grandes */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px;
+}
+.quadros2 {
+    background-color: #f9f9f9; /* Fundo muito claro */
+    color: black;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.quadros2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+.quadros2 h3 {
+    color: var(--primeira-cor);
+    text-align: left;
+    font-size: 1.6em;
+    border-bottom: 2px solid var(--segunda-cor); 
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* FOOTER */
+footer {
+    background-color:var(--primeira-cor);
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    width: 100%;
+}
+#dados {
+    font-size: 1.5em;
+    color: var(--quinta-cor);
+    margin-bottom: 20px;
 }
 .logos {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    margin: 20px 0;
-    
+    gap: 25px;
+}
+.linkedin img, .github img, .whatsapp img, .tiktok img {
+    width: 35px;
+    height: 35px;
+    filter: invert(100%);
+    transition: opacity 0.3s ease;
+}
+.logos a:hover img {
+    opacity: 0.7;
 }
 
-.linkedin img, .github img, .whatsapp img
-{
-    width: 40px;
-    height: 40px;
-    filter:invert(100%);
-}
-.tiktok img{
-    width: 40px;
-    height: 40px;
-    filter:invert(100%);
-}
-#dados {
-    font-size: 20px;
-}
-footer {
-    background-color:var(--primeira-cor);
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    width: 100%;
-    bottom: 0;
-}
-.quadros {
-    display: grid;
-    grid-template-columns: 100%;   
-    justify-content: center;
-    align-items: center;
-}
-.quadros2 {
-    background-color: #33333318;
-    color: black;
-    padding: 20px;
-    margin: 5px;
-    border-radius: 10px;
-    box-shadow: #33333333 0px 4px 8px 0px;
+/* RESPONSIVIDADE BÁSICA (Ajustes para mobile) */
+@media (max-width: 768px) {
+    #back {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 10px;
+    }
+    header ul li {
+        margin: 0 5px;
+    }
+    header nav {
+        margin-top: 10px;
+    }
     
-}
-.quadros2 h3 {
-    color: var(--primeira-cor);
-    text-align: left;
-    font-size: 1.8em;
-}
-#servicos ul {
-    list-style: none;
-}
-#servicos ul li::before {
-    content: url(imagens/Tick_Mark_Dark_icon-icons.com_69147.png);
-    width: 10px;
-    height: 10px;
-    margin-right: 8px;
+    #home .apresentação h1 {
+        font-size: 2em;
+    }
     
-
+    #mais-sobre {
+        flex-direction: column;
+        padding-top: 40px;
+    }
+    
+    /* Remove padding excessivo em telas pequenas */
+    .sobre {
+        padding: 0;
+    }
+    
+    .quadros2 {
+        margin: 10px 0;
+    }
 }
