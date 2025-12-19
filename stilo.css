@@ -5,6 +5,7 @@
     --terceira-cor: #333; /* Texto escuro */
     --quarta-cor:#F2E205; /* Amarelo (não muito usado) */
     --quinta-cor:#fff; /* Branco */
+    --sexta-cor: #f4f4f4; /* Fundo claro para seções */
 }
 
 /* GERAL */
@@ -20,7 +21,7 @@ strong {
     color: var(--segunda-cor);
     font-weight: 600;
 }
-h1, h2, h3 {
+h1, h2, h3, h4 {
     color: var(--terceira-cor); /* Títulos em cor escura por padrão */
 }
 main {
@@ -165,7 +166,7 @@ header ul li a:hover {
 }
 
 /* SOLUÇÕES (Quadros) */
-#soluções {
+#solucoes {
     padding: 50px 20px;
     max-width: 1200px;
     margin: 0 auto;
@@ -197,6 +198,59 @@ header ul li a:hover {
     margin-bottom: 15px;
 }
 
+/* PROJETOS */
+#projetos {
+    background-color: var(--sexta-cor);
+}
+#projetos h2 {
+    color: var(--primeira-cor);
+    text-align: center;
+    margin-bottom: 40px;
+}
+.projeto-destaque {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    background-color: var(--quinta-cor);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.projeto-imagem {
+    flex: 1 1 400px;
+    text-align: center;
+}
+.projeto-imagem img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+.projeto-texto {
+    flex: 1 1 500px;
+    text-align: justify;
+}
+.projeto-texto h3 {
+    color: var(--primeira-cor);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--segunda-cor);
+    padding-bottom: 5px;
+    display: inline-block;
+}
+.projeto-texto h4 {
+    color: var(--primeira-cor);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.projeto-texto ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+.projeto-texto ul li {
+    margin-bottom: 5px;
+}
+
 /* FOOTER */
 footer {
     background-color:var(--primeira-cor);
@@ -204,6 +258,9 @@ footer {
     text-align: center;
     padding: 30px 0;
     width: 100%;
+}
+footer h2{
+    color: #fff;
 }
 #dados {
     font-size: 1.5em;
@@ -244,13 +301,13 @@ footer {
         font-size: 2em;
     }
     
-    #mais-sobre {
+    #mais-sobre, .projeto-destaque {
         flex-direction: column;
         padding-top: 40px;
     }
     
     /* Remove padding excessivo em telas pequenas */
-    .sobre {
+    .sobre, .projeto-texto {
         padding: 0;
     }
     
