@@ -282,6 +282,17 @@ footer h2{
 .logos a:hover img {
     opacity: 0.7;
 }
+.maisconfig ul{
+    list-style: none;
+}
+.maisconfig ul li::before {
+    content: "\2713"; 
+    color: var(--segunda-cor); 
+    font-weight: bold;
+    margin-right: 15px;
+    display: inline-block;
+    width: 20px; 
+}
 
 /* RESPONSIVIDADE BÁSICA (Ajustes para mobile) */
 @media (max-width: 768px) {
@@ -314,4 +325,5 @@ footer h2{
     .quadros2 {
         margin: 10px 0;
     }
+    
 }
