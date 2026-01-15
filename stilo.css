@@ -38,7 +38,7 @@ header.scrolled {
 }
 
 .nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
-.logo img { height: 45px; }
+.logo img { height: 90px; }
 
 .nav-menu { display: flex; list-style: none; align-items: center; }
 .nav-menu a {
