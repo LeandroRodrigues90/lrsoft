@@ -168,14 +168,75 @@ h1 {
     transform: translateY(0);
 }
 
-footer { background: #fff; padding: 80px 0 30px; border-top: 1px solid #eee; }
-.footer-content { display: flex; justify-content: space-between; align-items: center; }
-.social-links img { width: 24px; margin-left: 20px; filter: grayscale(1); }
-.footer-bottom { text-align: center; margin-top: 50px; font-size: 0.8rem; color: #999; }
+/* --- FOOTER E ÍCONES (COM REMOÇÃO DE SUBLINHADO) --- */
 
+footer { 
+    background: #fff; 
+    padding: 80px 0 30px; 
+    border-top: 1px solid #eee; 
+}
+
+.footer-content { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.social-links { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.social-icon {
+    text-decoration: none; /* ISTO REMOVE O SUBLINHADO DO GMAIL */
+}
+
+.social-links img { 
+    width: 28px; 
+    height: auto;
+    margin-left: 20px; 
+    filter: grayscale(1); 
+    display: block;
+}
+
+.footer-bottom { 
+    text-align: center; 
+    margin-top: 50px; 
+    font-size: 0.8rem; 
+    color: #999; 
+}
+
+.social-icon i {
+    font-size: 28px; 
+    color: #000;    
+    margin-left: 20px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.social-icon:hover i {
+    color: #666; 
+    transform: scale(1.1);
+}
+
+/* Responsividade Celular */
 @media (max-width: 768px) {
     h1 { font-size: 2.8rem; }
     .card-grid { grid-template-columns: 1fr; }
     .nav-menu { display: none; }
     .stats-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
+    
+    .footer-content { 
+        flex-direction: column; 
+        text-align: center; 
+    }
+    
+    .social-links {
+        margin-top: 10px;
+        margin-left: -20px; 
+    }
 }
