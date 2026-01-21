@@ -39,7 +39,16 @@ header.scrolled {
 }
 
 .nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
-.logo img { height: 90px; }
+
+/* MODIFICADO: Estilização da Logo com Animação de Entrada */
+.logo img { 
+    height: 90px; 
+    opacity: 0;
+    /* Inicia a imagem "quebrada" por clip-path e escala */
+    clip-path: polygon(50% 50%, 50% 20%, 50% 50%, 80% 50%, 50% 50%, 50% 80%, 50% 50%, 20% 50%);
+    animation: puzzleAssemble 1.6s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation-delay: 0.2s;
+}
 
 .nav-menu { display: flex; list-style: none; align-items: center; }
 .nav-menu a {
@@ -143,7 +152,7 @@ h1 {
 .section-header { text-align: center; margin-bottom: 80px; }
 .section-header h2 { font-size: 3rem; font-weight: 800; color: var(--primary); }
 
-/* Ajuste para o título ficar branco em seções escuras (ex: Projetos de Impacto) */
+/* Ajuste para o título ficar branco em seções escuras */
 .dark-bg .section-header h2 {
     color: #ffffff;
 }
@@ -192,8 +201,7 @@ h1 {
     transform: translateY(0);
 }
 
-/* --- FOOTER E ÍCONES (CORRIGIDO) --- */
-
+/* --- FOOTER E ÍCONES --- */
 footer { 
     background: #fff; 
     padding: 80px 0 30px; 
@@ -220,7 +228,6 @@ footer {
     align-items: center;
 }
 
-/* Correção: Efeito de hover para ícones que são imagens (IMG) */
 .social-links img { 
     width: 28px; 
     height: auto;
@@ -242,7 +249,6 @@ footer {
     color: #999; 
 }
 
-/* Correção: Efeito de hover para ícones de fonte (Ex: e-mail) */
 .social-icon i {
     font-size: 28px; 
     color: #000000a8;  
@@ -255,6 +261,24 @@ footer {
 .social-icon:hover i {
     filter: grayscale(0) opacity(1);
     transform: scale(1.1);
+}
+
+/* --- KEYFRAMES PARA O EFEITO DE QUEBRA-CABEÇA --- */
+@keyframes puzzleAssemble {
+    0% {
+        opacity: 0;
+        transform: scale(1.4) rotate(-5deg);
+        clip-path: polygon(50% 50%, 50% 20%, 50% 50%, 80% 50%, 50% 50%, 50% 80%, 50% 50%, 20% 50%);
+    }
+    50% {
+        opacity: 1;
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
 }
 
 /* Responsividade Celular */
