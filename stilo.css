@@ -250,13 +250,14 @@ footer {
 }
 
 .social-icon i {
-    font-size: 28px; 
+    font-size: 27px; 
     color: #000000a8;  
     margin-left: 20px;
     transition: 0.3s;
     display: flex;
     align-items: center;
 }
+
 
 .social-icon:hover i {
     filter: grayscale(0) opacity(1);
